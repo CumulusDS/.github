@@ -1,0 +1,202 @@
+---
+# Labels names are important as they are used by Release Drafter to decide
+# regarding where to record them in changelog or if to skip them.
+#
+# The repository labels will be automatically configured using this file and
+# the GitHub Action https://github.com/marketplace/actions/github-labeler.
+- name: "autoapprove"
+  description: "auto approve changes for merge"
+  color: "#fbca04"
+  aliases: []
+- name: "automation"
+  description: "automatic change"
+  color: "#A763B0"
+  aliases: []
+- name: "automerge"
+  description: "automergable"
+  color: "#fbca04"
+  aliases: []
+- name: "before-prod"
+  description: "Must be done before prod launch"
+  color: "#D47A26"
+  aliases: []
+- name: "blocker"
+  description: "issues blocking prod deployment"
+  color: "#B60205"
+  aliases: []
+- name: "breaking"
+  description: "Breaking Changes"
+  color: "#bfd4f2"
+  aliases: []
+- name: "build"
+  description: "Build System and Dependencies"
+  color: "#bfdadc"
+  aliases: []
+- name: "bug"
+  description: "Something isn't working"
+  color: "#d73a4a"
+  aliases: []
+- name: "chore"
+  description: "chore task"
+  color: "#725E6D"
+  aliases: []
+- name: "ci"
+  description: "Continuous Integration"
+  color: "#4a97d6"
+  aliases: []
+- name: "codebase"
+  description: "Pull requests that update codebase"
+  color: "#168700"
+  aliases: []
+- name: "config"
+  description: "configuration change"
+  color: "#0e8a16"
+  aliases: []
+- name: "dependabot"
+  description: "dependabot changes"
+  color: "#006b75"
+  aliases: []
+- name: "dependencies"
+  description: "Pull requests that update a dependency file"
+  color: "#0366d6"
+  aliases: []
+- name: "deployment"
+  description: "Changes at the deployment procedure, serverless.yml"
+  color: "#347003"
+  aliases: []
+- name: "dev"
+  description: "Development environment(s) changed/updated"
+  color: "#a9f9cf"
+  aliases: []
+- name: "documentation"
+  description: "Improvements or additions to documentation"
+  color: "#0075ca"
+  aliases: []
+- name: "duplicate"
+  description: "This issue or pull request already exists"
+  color: "#cfd3d7"
+  aliases: []
+- name: "enhancement"
+  description: "New feature or request"
+  color: "#a2eeef"
+  aliases: []
+- name: "epic"
+  description: "epic"
+  color: "#31405F"
+  aliases: []
+- name: "github-actions"
+  description: "github actions change"
+  color: "#d4c5f9"
+  aliases: 'actions'
+- name: "good first issue"
+  description: "Good for newcomers"
+  color: "#7057ff"
+  aliases: []
+- name: "help wanted"
+  description: "Extra attention is needed"
+  color: "#008672"
+  aliases: []
+- name: "infrastructure"
+  description: "application infrastructure, cloudformation, serverless, terraform work, etc."
+  color: "#0366d6"
+  aliases: []
+- name: "invalid"
+  description: "This doesn't seem right"
+  color: "#e4e669"
+  aliases: []
+- name: "keep alive"
+  description: "stop from going stale"
+  color: "#35a458"
+  aliases: []
+- name: "performance"
+  description: "Performance"
+  color: "#016175"
+  aliases: []
+- name: "prod"
+  description: "Production Environment(s) changed/updated"
+  color: "#c61d91"
+  aliases: []
+- name: "question"
+  description: "Further information is requested"
+  color: "#d876e3"
+  aliases: []
+- name: "refactoring"
+  description: "Refactoring"
+  color: "#ef67c4"
+  aliases: []
+- name: "removal"
+  description: "Removals and Deprecations"
+  color: "#9ae7ea"
+  aliases: []
+- name: "SQA Approved"
+  description: "SQA Tested & Approved"
+  color: "#C2E0C6"
+  aliases: []
+- name: "stale 7"
+  description: "stale - no movement in 7 days"
+  color: "#BF7034"
+  aliases: []
+- name: "stale 30"
+  description: "stale - no movement in 30 days"
+  color: "#BF7034"
+  aliases: []
+- name: "stale 90"
+  description: "stale - no movement in 90 days"
+  color: "#BF7034"
+  aliases: []
+- name: "story-1"
+  description: "1 story point"
+  color: "#BF7034"
+  aliases: []
+- name: "story-2"
+  description: "2 story point"
+  color: "#05C8BA"
+  aliases: []
+- name: "story-4"
+  description: "4 story point"
+  color: "#27D13F"
+  aliases: []
+- name: "story-6"
+  description: "6 story point"
+  color: "#0A48DB"
+  aliases: []
+- name: "story-8"
+  description: "8 story point"
+  color: "#8E451B"
+  aliases: []
+- name: "story-10"
+  description: "10 story point"
+  color: "#2E5F12"
+  aliases: []
+- name: "story-12"
+  description: "12 story point"
+  color: "#502424"
+  aliases: []
+- name: "story-16"
+  description: "16 story point"
+  color: "#94180F"
+  aliases: []
+- name: "story-24"
+  description: "24 story point"
+  color: "#E32BAD"
+  aliases: []
+- name: "story-32"
+  description: "32 story point"
+  color: "#B3863B"
+  aliases: []
+- name: "style"
+  description: "Style"
+  color: "#c120e5"
+  aliases: []
+- name: "testing"
+  description: "Testing in progress"
+  color: "#b1fc6f"
+  aliases: []
+- name: "wip"
+  description: "Work in progress"
+  color: "#bec4f7"
+  aliases: []
+- name: "wontfix"
+  description: "This will not be worked on"
+  color: "#ffffff"
+  aliases: []

@@ -1,0 +1,27 @@
+name: Sync Labels
+on:
+  workflow_dispatch:
+  push:
+    branches: ['main', 'master']
+    paths:
+      - '.github/labels.yml'
+      - '.github/workflows/labels.yml'
+permissions:
+  issues: write
+jobs:
+  labels:
+    runs-on: ubuntu-latest
+    name: Sync Labels
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          sparse-checkout: .github/labels.yml
+      - name: Sync Labels
+        uses: reece/label-sync@main
+        with:
+          config-file: |
+            https://raw.githubusercontent.com/cumulusds/.github/master/etc/labels.yml
+            .github/labels.yml
+          delete-other-labels: false
+          #token: ${{ secrets.GITHUB_TOKEN }}
