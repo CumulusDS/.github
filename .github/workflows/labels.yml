@@ -13,8 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Sync Labels
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           sparse-checkout: .github/labels.yml
       - name: Sync Labels
@@ -24,4 +23,4 @@ jobs:
             https://raw.githubusercontent.com/cumulusds/.github/master/etc/labels.yml
             .github/labels.yml
           delete-other-labels: false
-          #token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.RELEASE_TOKEN }}
