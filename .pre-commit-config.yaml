@@ -1,12 +1,24 @@
+default_install_hook_types:
+  - pre-commit
+  - commit-msg
+  - pre-push
+default_stages:
+  - pre-commit
+  - pre-push
 fail_fast: false
 repos:
+  - repo: meta
+    hooks:
+      #- id: "check-hooks-apply"
+      - id: "check-useless-excludes"
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
     hooks:
       # guard rails
       - id: "check-added-large-files"           # Ensures that large files are not accidentally added to the repository.
         args: [ --maxkb=10240 ]
-      - id: "check-case-conflict" # Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT.
+      - id: "check-case-conflict"               # Check for files with names that would conflict on a case-insensitive
+                                                # filesystem like MacOS HFS+ or Windows FAT.
       - id: "check-illegal-windows-names"       # Check for files that cannot be created on Windows.
       - id: "check-json"                        # Attempts to load all json files to verify syntax.
       - id: "check-merge-conflict"              # Check for files that contain merge conflict strings.
@@ -16,7 +28,8 @@ repos:
       - id: "check-xml"                         # Attempts to load all xml files to verify syntax.
       - id: "check-yaml"                        # Attempts to load all yaml files to verify syntax.
         args: [ --allow-multiple-documents, --unsafe ]
-      - id: "destroyed-symlinks"                # Detects symlinks which are changed to regular files with a content of a path which that symlink was pointing to.
+      - id: "destroyed-symlinks"                # Detects symlinks which are changed to regular files with a content of
+                                                # a path which that symlink was pointing to.
       - id: "detect-aws-credentials"            # Checks for the existence of AWS secrets
       - id: "detect-private-key"                # Checks for the existence of private keys.
       # formatters
@@ -31,7 +44,7 @@ repos:
       - id: "commitizen"                        # Enforces the usage of the Commitizen commit message format for
                                                 # consistent and standardized commits
       - id: "commitizen-branch"                 # Performs commit message validation
-        stages: [pre-push]
+        stages: [ "post-commit", "pre-push" ]
   - repo: https://github.com/python-jsonschema/check-jsonschema
     rev: 0.29.4
     hooks:
