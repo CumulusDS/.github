@@ -1,2 +1,65 @@
+*~
+
+# DependencyCheck
+dependency-check/
+dependency-check-report.html
+
+# Dependency directories
+node_modules/
+remote_repos/
+
+# Desktop Service Store
+.DS_Store
+
+# dotenv environment variables file
+.env
+.env.test
+
+# ESLint (optional) cache
+.eslintcache
+
+# Logs
+logs/
+*.log
+
+# REPL (Optional) history
+.node_repl_history
+
+# NPM (optional) cache directory
+.npm
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Visual Studio
+## Visual Studio 2015 cache/options directory
+.vs/
+## Visual Studio code coverage results
+*.coverage
+*.coveragexml
+## Visual Studio Profiler
+*.psess
+*.vsp
+*.vspx
+*.sap
+## Visual Studio User Configuration
+*.user
+## VSCode settings
+.vscode/**
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+
+#WebStorm Ignores
 .idea/
+dist/bundle.js
+
+# Yarn
+yarn-debug.log*
+yarn-error.log*
+## Yarn Integrity file
+.yarn-integrity
+
+# Test output stuff
 var/

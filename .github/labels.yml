@@ -4,6 +4,14 @@
 #
 # The repository labels will be automatically configured using this file and
 # the GitHub Action https://github.com/marketplace/actions/github-labeler.
+- name: "analytics"
+  description: ""
+  color: "#"
+  aliases: []
+- name: "android"
+  description: "Specific to Android build"
+  color: "#006b75"
+  aliases: []
 - name: "autoapprove"
   description: "auto approve changes for merge"
   color: "#fbca04"
@@ -36,6 +44,10 @@
   description: "Something isn't working"
   color: "#d73a4a"
   aliases: []
+- name: "bug?"
+  description: "Something isn't working"
+  color: "#"
+  aliases: []
 - name: "chore"
   description: "chore task"
   color: "#725E6D"
@@ -51,6 +63,10 @@
 - name: "config"
   description: "configuration change"
   color: "#0e8a16"
+  aliases: []
+- name: "dead letter"
+  description: ""
+  color: "#"
   aliases: []
 - name: "dependabot"
   description: "dependabot changes"
@@ -68,6 +84,10 @@
   description: "Development environment(s) changed/updated"
   color: "#a9f9cf"
   aliases: []
+- name: "dev tool"
+  description: ""
+  color: "#"
+  aliases: []
 - name: "documentation"
   description: "Improvements or additions to documentation"
   color: "#0075ca"
@@ -84,6 +104,10 @@
   description: "epic"
   color: "#31405F"
   aliases: []
+- name: "feature request"
+  description: "This is a feature requested by a customer."
+  color: "#4104AF"
+  aliases: ["feature"]
 - name: "github-actions"
   description: "github actions change"
   color: "#d4c5f9"
@@ -104,14 +128,38 @@
   description: "This doesn't seem right"
   color: "#e4e669"
   aliases: []
+- name: "javascript"
+  description: "This doesn't seem right"
+  color: "#168700"
+  aliases: []
+- name: "iOS"
+  description: "Specific to iOS build"
+  color: "#7937fc"
+  aliases: []
 - name: "keep alive"
   description: "stop from going stale"
   color: "#35a458"
+  aliases: []
+- name: "management & governance"
+  description: ""
+  color: "#"
+  aliases: []
+- name: "Needs SQA"
+  description: ""
+  color: "#"
+  aliases: []
+- name: "needs triage"
+  description: ""
+  color: "#"
   aliases: []
 - name: "performance"
   description: "Performance"
   color: "#016175"
   aliases: []
+- name: "platform"
+  description: "Advances or implements an architecture/platform agenda"
+  color: "#c5ea20"
+  aliases: ["architecture"]
 - name: "prod"
   description: "Production Environment(s) changed/updated"
   color: "#c61d91"
@@ -127,6 +175,10 @@
 - name: "removal"
   description: "Removals and Deprecations"
   color: "#9ae7ea"
+  aliases: []
+- name: "research"
+  description: "Researching"
+  color: "#aaaaaa"
   aliases: []
 - name: "SQA Approved"
   description: "SQA Tested & Approved"
@@ -144,6 +196,10 @@
   description: "stale - no movement in 90 days"
   color: "#BF7034"
   aliases: []
+- name: "STORY"
+  description: "1 story point"
+  color: "#6B4C9F"
+  aliases: ["Story"]
 - name: "story-1"
   description: "1 story point"
   color: "#BF7034"
@@ -188,9 +244,21 @@
   description: "Style"
   color: "#c120e5"
   aliases: []
+- name: "tech debt"
+  description: "Technical Debt"
+  color: "#fef2c0"
+  aliases: []
 - name: "testing"
   description: "Testing in progress"
   color: "#b1fc6f"
+  aliases: []
+- name: "test suite"
+  description: ""
+  color: "#b8f96d"
+  aliases: []
+- name: "typescript"
+  description: ""
+  color: "#168700"
   aliases: []
 - name: "wip"
   description: "Work in progress"

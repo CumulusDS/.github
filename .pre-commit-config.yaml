@@ -1,0 +1,48 @@
+fail_fast: false
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      # guard rails
+      - id: "check-added-large-files"           # Ensures that large files are not accidentally added to the repository.
+        args: [ --maxkb=10240 ]
+      - id: "check-case-conflict" # Check for files with names that would conflict on a case-insensitive filesystem like MacOS HFS+ or Windows FAT.
+      - id: "check-illegal-windows-names"       # Check for files that cannot be created on Windows.
+      - id: "check-json"                        # Attempts to load all json files to verify syntax.
+      - id: "check-merge-conflict"              # Check for files that contain merge conflict strings.
+      - id: "check-shebang-scripts-are-executable" # Checks that non-binary executables have a proper shebang.
+      - id: "check-symlinks"                    # Checks for symlinks which do not point to anything.
+      - id: "check-toml"                        # Attempts to load all TOML files to verify syntax.
+      - id: "check-xml"                         # Attempts to load all xml files to verify syntax.
+      - id: "check-yaml"                        # Attempts to load all yaml files to verify syntax.
+        args: [ --allow-multiple-documents, --unsafe ]
+      - id: "destroyed-symlinks"                # Detects symlinks which are changed to regular files with a content of a path which that symlink was pointing to.
+      - id: "detect-aws-credentials"            # Checks for the existence of AWS secrets
+      - id: "detect-private-key"                # Checks for the existence of private keys.
+      # formatters
+      - id: "end-of-file-fixer"                 # Adds an end-of-file marker at the end of files if missing.
+      - id: "mixed-line-ending"                 # Replaces or checks mixed line ending.
+        args: [ --fix=no ]
+      - id: "pretty-format-json"                # Checks that all your JSON files are pretty.
+        args: [ --autofix, --no-sort-keys ]
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v3.31.0
+    hooks:
+      - id: "commitizen"                        # Enforces the usage of the Commitizen commit message format for
+                                                # consistent and standardized commits
+      - id: "commitizen-branch"                 # Performs commit message validation
+        stages: [pre-push]
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.29.4
+    hooks:
+      - id: check-dependabot                    # Validate Dependabot Config (v2) against the schema provided by SchemaStore
+      - id: check-github-actions
+        files: action.(yml|yaml)
+      - id: check-github-workflows
+        files: \.github/workflows/.*\.(yml|yaml)$
+        args: ["--verbose"]
+  - repo: https://github.com/detailyang/pre-commit-shell
+    rev: 1.0.5
+    hooks:
+      - id: shell-lint
+        args: [ --shell=bash ]

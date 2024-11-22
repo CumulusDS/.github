@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+
+set -euf -o pipefail
+
+main() {
+  tabs 4
+  brewInstalled=$(command -v brew)
+  if [[ "${brewInstalled}" == "" ]]; then
+    echo "Installing Homebrew"
+    # shellcheck disable=SC2312
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  else
+    echo "Homebrew already installed; updating"
+    brew update
+    brew upgrade
+    brew upgrade --cask
+  fi
+  echo;
+
+  set +e
+  commitizenInstalled=$(command -v cz)
+  preCommitInstalled=$(command -v pre-commit)
+  shellcheckInstalled=$(command -v shellcheck)
+  set -e
+
+  echo "Installing dependencies via homebrew:"
+  echo -e "\tcommitizen"
+  echo -e "\tshellcheck"
+  [[ "${commitizenInstalled}" == "" ]] && brew install commitizen
+  [[ "${shellcheckInstalled}" == "" ]] && brew install shellcheck
+  echo;
+
+  echo "Installing dependencies via pip:"
+  echo -e "\tpre-commit"
+  [[ "${preCommitInstalled}" == "" ]] && pip install pre-commit
+}
+
+main "$@"
