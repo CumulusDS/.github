@@ -144,10 +144,10 @@
   description: ""
   color: "#"
   aliases: []
-- name: "Needs SQA"
+- name: "Ready for SQA"
   description: ""
   color: "#"
-  aliases: []
+  aliases: ["ReadyForSQA", "ReadyForSqa"]
 - name: "needs triage"
   description: ""
   color: "#"
