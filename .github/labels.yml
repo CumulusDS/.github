@@ -4,13 +4,21 @@
 #
 # The repository labels will be automatically configured using this file and
 # the GitHub Action https://github.com/marketplace/actions/github-labeler.
+- name: "actions"
+  description: "github actions change"
+  color: "#d4c5f9"
+  aliases: []
 - name: "analytics"
-  description: ""
-  color: "#"
+  description: "analytics"
+  color: "#c5def5"
   aliases: []
 - name: "android"
   description: "Specific to Android build"
   color: "#006b75"
+  aliases: []
+- name: "audit"
+  description: "Regular Account Audits"
+  color: "#6fb1d0"
   aliases: []
 - name: "autoapprove"
   description: "auto approve changes for merge"
@@ -18,7 +26,7 @@
   aliases: []
 - name: "automation"
   description: "automatic change"
-  color: "#A763B0"
+  color: "#a763b0"
   aliases: []
 - name: "automerge"
   description: "automergable"
@@ -26,15 +34,15 @@
   aliases: []
 - name: "before-prod"
   description: "Must be done before prod launch"
-  color: "#D47A26"
+  color: "#d47a26"
   aliases: []
 - name: "blocker"
   description: "issues blocking prod deployment"
-  color: "#B60205"
+  color: "#b60205"
   aliases: []
 - name: "breaking"
   description: "Breaking Changes"
-  color: "#bfd4f2"
+  color: "#b60205"
   aliases: []
 - name: "build"
   description: "Build System and Dependencies"
@@ -44,13 +52,9 @@
   description: "Something isn't working"
   color: "#d73a4a"
   aliases: []
-- name: "bug?"
-  description: "Something isn't working"
-  color: "#"
-  aliases: []
 - name: "chore"
   description: "chore task"
-  color: "#725E6D"
+  color: "#bfdadc"
   aliases: []
 - name: "ci"
   description: "Continuous Integration"
@@ -65,19 +69,19 @@
   color: "#0e8a16"
   aliases: []
 - name: "dead letter"
-  description: ""
-  color: "#"
-  aliases: []
+  description: "i see dead letters"
+  color: "#350d07"
+  aliases: ["deadletter","dlq","DLQ","DeadLetter","Dead Letter"]
 - name: "dependabot"
   description: "dependabot changes"
   color: "#006b75"
   aliases: []
 - name: "dependencies"
-  description: "Pull requests that update a dependency file"
+  description: "Dependency update(s)"
   color: "#0366d6"
   aliases: []
 - name: "deployment"
-  description: "Changes at the deployment procedure, serverless.yml"
+  description: "Changes at the deployment procedure, e.g. serverless.yml"
   color: "#347003"
   aliases: []
 - name: "dev"
@@ -85,8 +89,8 @@
   color: "#a9f9cf"
   aliases: []
 - name: "dev tool"
-  description: ""
-  color: "#"
+  description: "tool aiding developers/development"
+  color: "#f78611"
   aliases: []
 - name: "documentation"
   description: "Improvements or additions to documentation"
@@ -102,16 +106,12 @@
   aliases: []
 - name: "epic"
   description: "epic"
-  color: "#31405F"
+  color: "#31405f"
   aliases: []
 - name: "feature request"
-  description: "This is a feature requested by a customer."
-  color: "#4104AF"
+  description: "This is a new feature request"
+  color: "#4104af"
   aliases: ["feature"]
-- name: "github-actions"
-  description: "github actions change"
-  color: "#d4c5f9"
-  aliases: 'actions'
 - name: "good first issue"
   description: "Good for newcomers"
   color: "#7057ff"
@@ -129,7 +129,7 @@
   color: "#e4e669"
   aliases: []
 - name: "javascript"
-  description: "This doesn't seem right"
+  description: "Pull requests that update Javascript code"
   color: "#168700"
   aliases: []
 - name: "iOS"
@@ -142,15 +142,15 @@
   aliases: []
 - name: "management & governance"
   description: ""
-  color: "#"
+  color: "#9e0e6c"
   aliases: []
 - name: "Ready for SQA"
-  description: ""
-  color: "#"
+  description: "Ready to be reviewed/tested by SQA"
+  color: "#fbca04"
   aliases: ["ReadyForSQA", "ReadyForSqa"]
 - name: "needs triage"
-  description: ""
-  color: "#"
+  description: "something requiring human attention to decipher a set of tasks to remediate"
+  color: "#1e040b"
   aliases: []
 - name: "performance"
   description: "Performance"
@@ -180,49 +180,53 @@
   description: "Researching"
   color: "#aaaaaa"
   aliases: []
+- name: "security"
+  description: ""
+  color: "#fba33e"
+  aliases: []
 - name: "SQA Approved"
   description: "SQA Tested & Approved"
-  color: "#C2E0C6"
-  aliases: []
+  color: "#0e8a16"
+  aliases: ["SQAApproved", "SqaApproved", "Sqa Approved"]
 - name: "stale 7"
   description: "stale - no movement in 7 days"
-  color: "#BF7034"
+  color: "#bf7034"
   aliases: []
 - name: "stale 30"
   description: "stale - no movement in 30 days"
-  color: "#BF7034"
+  color: "#bf7034"
   aliases: []
 - name: "stale 90"
   description: "stale - no movement in 90 days"
-  color: "#BF7034"
+  color: "#bf7034"
   aliases: []
-- name: "STORY"
-  description: "1 story point"
-  color: "#6B4C9F"
-  aliases: ["Story"]
+- name: "Story"
+  description: "Story issue with sub-tasks"
+  color: "#6b4c9f"
+  aliases: ["STORY"]
 - name: "story-1"
   description: "1 story point"
-  color: "#BF7034"
+  color: "#bf7034"
   aliases: []
 - name: "story-2"
   description: "2 story point"
-  color: "#05C8BA"
+  color: "#05c8ba"
   aliases: []
 - name: "story-4"
   description: "4 story point"
-  color: "#27D13F"
+  color: "#27d13f"
   aliases: []
 - name: "story-6"
   description: "6 story point"
-  color: "#0A48DB"
+  color: "#0a48db"
   aliases: []
 - name: "story-8"
   description: "8 story point"
-  color: "#8E451B"
+  color: "#8e451b"
   aliases: []
 - name: "story-10"
   description: "10 story point"
-  color: "#2E5F12"
+  color: "#2e5f12"
   aliases: []
 - name: "story-12"
   description: "12 story point"
@@ -230,15 +234,15 @@
   aliases: []
 - name: "story-16"
   description: "16 story point"
-  color: "#94180F"
+  color: "#94180f"
   aliases: []
 - name: "story-24"
   description: "24 story point"
-  color: "#E32BAD"
+  color: "#e32bad"
   aliases: []
 - name: "story-32"
   description: "32 story point"
-  color: "#B3863B"
+  color: "#b3863b"
   aliases: []
 - name: "style"
   description: "Style"
@@ -247,7 +251,7 @@
 - name: "tech debt"
   description: "Technical Debt"
   color: "#fef2c0"
-  aliases: []
+  aliases: ["tech-debt"]
 - name: "testing"
   description: "Testing in progress"
   color: "#b1fc6f"
@@ -257,8 +261,8 @@
   color: "#b8f96d"
   aliases: []
 - name: "typescript"
-  description: ""
-  color: "#168700"
+  description: "Pull requests that update Typescript code"
+  color: "#1d76db"
   aliases: []
 - name: "wip"
   description: "Work in progress"

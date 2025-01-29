@@ -2,6 +2,7 @@
 name: 💡 Feature request
 about: Suggest an idea for this project
 title: '💡 feat:'
+type: 'Feature'
 labels: 'enhancement'
 assignees: ''
 

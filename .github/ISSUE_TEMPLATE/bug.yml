@@ -1,6 +1,7 @@
-name: 🐞 Bug
+name: 🐛 Bug
 description: File a bug report.
-title: "Bug: "
+title: "🐛 Bug: "
+type: "bug"
 labels: ["bug"]
 projects: ["CumulusDS/8", "CumulusDS/20"]
 body:
@@ -55,12 +56,14 @@ body:
     attributes:
       label: What is the context of this bug?
       description: |
-        Links? References? Anything that will give us more context about the bug you are encountering!        
+        Links? References? Anything that will give us more context about the bug you are encountering!
         Example entity?  (connection, test pack, etc.)
         What site are you using?
         What username?
         Tip: You can attach images or log files by clicking this area to highlight it and then dragging files in.
       placeholder: Is there any additional context to help us understand what you were doing?
+    validations:
+      required: true
 
   - type: markdown
     attributes:
