@@ -1,0 +1,8 @@
+# CODEOWNERS will automatically request reviews from listed owners on PRs that
+# include files below in their modifications.
+
+/.github/            @jeffsays
+/.github/*           @jeffsays
+/.github/**/*        @jeffsays
+serverless.yml   @jeffsays
+serverless*.yml  @jeffsays

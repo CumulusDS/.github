@@ -6,269 +6,341 @@
 # the GitHub Action https://github.com/marketplace/actions/github-labeler.
 - name: "actions"
   description: "github actions change"
-  color: "#d4c5f9"
+  color: "d4c5f9"
   aliases: []
+  delete: false
 - name: "analytics"
   description: "analytics"
-  color: "#c5def5"
+  color: "c5def5"
   aliases: []
+  delete: false
 - name: "android"
   description: "Specific to Android build"
-  color: "#006b75"
+  color: "006b75"
   aliases: []
+  delete: false
 - name: "audit"
   description: "Regular Account Audits"
-  color: "#6fb1d0"
+  color: "6fb1d0"
   aliases: []
+  delete: false
 - name: "autoapprove"
   description: "auto approve changes for merge"
-  color: "#fbca04"
+  color: "fbca04"
   aliases: []
+  delete: false
 - name: "automation"
   description: "automatic change"
-  color: "#a763b0"
+  color: "a763b0"
   aliases: []
+  delete: false
 - name: "automerge"
   description: "automergable"
-  color: "#fbca04"
+  color: "fbca04"
   aliases: []
+  delete: false
 - name: "before-prod"
   description: "Must be done before prod launch"
-  color: "#d47a26"
+  color: "d47a26"
   aliases: []
+  delete: false
 - name: "blocker"
   description: "issues blocking prod deployment"
-  color: "#b60205"
+  color: "b60205"
   aliases: []
+  delete: false
 - name: "breaking"
   description: "Breaking Changes"
-  color: "#b60205"
+  color: "b60205"
   aliases: []
+  delete: false
 - name: "build"
   description: "Build System and Dependencies"
-  color: "#bfdadc"
+  color: "bfdadc"
   aliases: []
+  delete: false
 - name: "bug"
   description: "Something isn't working"
-  color: "#d73a4a"
+  color: "d73a4a"
   aliases: []
+  delete: false
 - name: "chore"
   description: "chore task"
-  color: "#bfdadc"
+  color: "bfdadc"
   aliases: []
+  delete: false
 - name: "ci"
   description: "Continuous Integration"
-  color: "#4a97d6"
+  color: "4a97d6"
   aliases: []
+  delete: false
 - name: "codebase"
   description: "Pull requests that update codebase"
-  color: "#168700"
+  color: "168700"
   aliases: []
+  delete: false
 - name: "config"
   description: "configuration change"
-  color: "#0e8a16"
+  color: "0e8a16"
   aliases: []
+  delete: false
 - name: "dead letter"
   description: "i see dead letters"
-  color: "#350d07"
+  color: "350d07"
   aliases: ["deadletter","dlq","DLQ","DeadLetter","Dead Letter"]
+  delete: false
 - name: "dependabot"
   description: "dependabot changes"
-  color: "#006b75"
+  color: "006b75"
   aliases: []
+  delete: false
 - name: "dependencies"
   description: "Dependency update(s)"
-  color: "#0366d6"
+  color: "0366d6"
   aliases: []
+  delete: false
 - name: "deployment"
   description: "Changes at the deployment procedure, e.g. serverless.yml"
-  color: "#347003"
+  color: "347003"
   aliases: []
+  delete: false
 - name: "dev"
   description: "Development environment(s) changed/updated"
-  color: "#a9f9cf"
+  color: "a9f9cf"
   aliases: []
+  delete: false
 - name: "dev tool"
   description: "tool aiding developers/development"
-  color: "#f78611"
+  color: "f78611"
   aliases: []
+  delete: false
 - name: "documentation"
   description: "Improvements or additions to documentation"
-  color: "#0075ca"
+  color: "0075ca"
   aliases: []
+  delete: false
 - name: "duplicate"
   description: "This issue or pull request already exists"
-  color: "#cfd3d7"
+  color: "cfd3d7"
   aliases: []
+  delete: false
 - name: "enhancement"
   description: "New feature or request"
-  color: "#a2eeef"
+  color: "a2eeef"
   aliases: []
+  delete: false
 - name: "epic"
   description: "epic"
-  color: "#31405f"
+  color: "31405f"
   aliases: []
+  delete: false
 - name: "feature request"
   description: "This is a new feature request"
-  color: "#4104af"
+  color: "4104af"
   aliases: ["feature"]
+  delete: false
 - name: "good first issue"
   description: "Good for newcomers"
-  color: "#7057ff"
+  color: "7057ff"
   aliases: []
+  delete: false
 - name: "help wanted"
   description: "Extra attention is needed"
-  color: "#008672"
+  color: "008672"
   aliases: []
+  delete: false
+- name: "hotfix"
+  description: "applying hot fix to existing release"
+  color: "006B75"
+  aliases: []
+  delete: false
 - name: "infrastructure"
   description: "application infrastructure, cloudformation, serverless, terraform work, etc."
-  color: "#0366d6"
+  color: "0366d6"
   aliases: []
+  delete: false
 - name: "invalid"
   description: "This doesn't seem right"
-  color: "#e4e669"
+  color: "e4e669"
   aliases: []
+  delete: false
 - name: "javascript"
   description: "Pull requests that update Javascript code"
-  color: "#168700"
+  color: "168700"
   aliases: []
+  delete: false
 - name: "iOS"
   description: "Specific to iOS build"
-  color: "#7937fc"
+  color: "7937fc"
   aliases: []
+  delete: false
 - name: "keep alive"
   description: "stop from going stale"
-  color: "#35a458"
+  color: "35a458"
   aliases: []
+  delete: false
 - name: "management & governance"
   description: ""
-  color: "#9e0e6c"
+  color: "9e0e6c"
   aliases: []
+  delete: false
 - name: "Ready for SQA"
   description: "Ready to be reviewed/tested by SQA"
-  color: "#fbca04"
+  color: "fbca04"
   aliases: ["ReadyForSQA", "ReadyForSqa"]
+  delete: false
 - name: "needs triage"
   description: "something requiring human attention to decipher a set of tasks to remediate"
-  color: "#1e040b"
+  color: "1e040b"
   aliases: []
+  delete: false
 - name: "performance"
   description: "Performance"
-  color: "#016175"
+  color: "016175"
   aliases: []
+  delete: false
 - name: "platform"
   description: "Advances or implements an architecture/platform agenda"
-  color: "#c5ea20"
+  color: "1d76db"
   aliases: ["architecture"]
+  delete: false
 - name: "prod"
   description: "Production Environment(s) changed/updated"
-  color: "#c61d91"
+  color: "c61d91"
   aliases: []
+  delete: false
 - name: "question"
   description: "Further information is requested"
-  color: "#d876e3"
+  color: "d876e3"
   aliases: []
+  delete: false
 - name: "refactoring"
   description: "Refactoring"
-  color: "#ef67c4"
+  color: "ef67c4"
   aliases: []
+  delete: false
 - name: "removal"
   description: "Removals and Deprecations"
-  color: "#9ae7ea"
+  color: "9ae7ea"
   aliases: []
+  delete: false
 - name: "research"
   description: "Researching"
-  color: "#aaaaaa"
+  color: "aaaaaa"
   aliases: []
+  delete: false
 - name: "security"
   description: ""
-  color: "#fba33e"
+  color: "fba33e"
   aliases: []
+  delete: false
 - name: "SQA Approved"
   description: "SQA Tested & Approved"
-  color: "#0e8a16"
+  color: "0e8a16"
   aliases: ["SQAApproved", "SqaApproved", "Sqa Approved"]
+  delete: false
 - name: "stale 7"
   description: "stale - no movement in 7 days"
-  color: "#bf7034"
+  color: "bf7034"
   aliases: []
+  delete: false
 - name: "stale 30"
   description: "stale - no movement in 30 days"
-  color: "#bf7034"
+  color: "bf7034"
   aliases: []
+  delete: false
 - name: "stale 90"
   description: "stale - no movement in 90 days"
-  color: "#bf7034"
+  color: "bf7034"
   aliases: []
+  delete: false
 - name: "Story"
   description: "Story issue with sub-tasks"
-  color: "#6b4c9f"
+  color: "6b4c9f"
   aliases: ["STORY"]
-- name: "story-1"
-  description: "1 story point"
-  color: "#bf7034"
-  aliases: []
-- name: "story-2"
-  description: "2 story point"
-  color: "#05c8ba"
-  aliases: []
-- name: "story-4"
-  description: "4 story point"
-  color: "#27d13f"
-  aliases: []
-- name: "story-6"
-  description: "6 story point"
-  color: "#0a48db"
-  aliases: []
-- name: "story-8"
-  description: "8 story point"
-  color: "#8e451b"
-  aliases: []
-- name: "story-10"
-  description: "10 story point"
-  color: "#2e5f12"
-  aliases: []
-- name: "story-12"
-  description: "12 story point"
-  color: "#502424"
-  aliases: []
-- name: "story-16"
-  description: "16 story point"
-  color: "#94180f"
-  aliases: []
-- name: "story-24"
-  description: "24 story point"
-  color: "#e32bad"
-  aliases: []
-- name: "story-32"
-  description: "32 story point"
-  color: "#b3863b"
-  aliases: []
+  delete: false
+#- name: "story: 1"
+#  description: "1 story point"
+#  color: "bf7034"
+#  aliases: []
+#  delete: false
+#- name: "story: 2"
+#  description: "2 story point"
+#  color: "05c8ba"
+#  aliases: []
+#  delete: false
+#- name: "story: 4"
+#  description: "4 story point"
+#  color: "27d13f"
+#  aliases: []
+#  delete: false
+#- name: "story: 6"
+#  description: "6 story point"
+#  color: "0a48db"
+#  aliases: []
+#  delete: false
+#- name: "story: 8"
+#  description: "8 story point"
+#  color: "8e451b"
+#  aliases: []
+#  delete: false
+#- name: "story: 10"
+#  description: "10 story point"
+#  color: "2e5f12"
+#  aliases: []
+#  delete: false
+#- name: "story: 12"
+#  description: "12 story point"
+#  color: "502424"
+#  aliases: []
+#  delete: false
+#- name: "story: 16"
+#  description: "16 story point"
+#  color: "94180f"
+#  aliases: []
+#  delete: false
+#- name: "story: 24"
+#  description: "24 story point"
+#  color: "e32bad"
+#  aliases: []
+#  delete: false
+#- name: "story: 32"
+#  description: "32 story point"
+#  color: "b3863b"
+#  aliases: []
+#  delete: false
 - name: "style"
   description: "Style"
-  color: "#c120e5"
+  color: "c120e5"
   aliases: []
+  delete: false
 - name: "tech debt"
-  description: "Technical Debt"
-  color: "#fef2c0"
+  description: "required to bring system up to date"
+  color: "fef2c0"
   aliases: ["tech-debt"]
+  delete: false
 - name: "testing"
   description: "Testing in progress"
-  color: "#b1fc6f"
+  color: "b1fc6f"
   aliases: []
+  delete: false
 - name: "test suite"
   description: ""
-  color: "#b8f96d"
+  color: "b8f96d"
   aliases: []
+  delete: false
 - name: "typescript"
   description: "Pull requests that update Typescript code"
-  color: "#1d76db"
+  color: "1d76db"
   aliases: []
+  delete: false
 - name: "wip"
   description: "Work in progress"
-  color: "#bec4f7"
+  color: "bec4f7"
   aliases: []
+  delete: false
 - name: "wontfix"
   description: "This will not be worked on"
-  color: "#ffffff"
+  color: "ffffff"
   aliases: []
+  delete: false

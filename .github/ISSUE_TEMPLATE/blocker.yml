@@ -1,7 +1,7 @@
 name: 🚫 Blocker
 description: File a production deployment blocker.
 title: "🚫 Blocker: "
-type: ""
+type: "BLOCKER"
 labels: ["blocker"]
 projects: ["CumulusDS/20"]
 body:

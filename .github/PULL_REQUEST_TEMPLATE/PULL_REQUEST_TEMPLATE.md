@@ -13,38 +13,53 @@
       - `Resolves #10, resolves #123, resolves CumulusDS/awesome-repo#100`
 
 
-# Dependencies
-## What depends on this PR?
-- Link to PR(s) here
-
-
-## What does this PR depend on?
-- Link to PR(s) here
-
-
 # Changes
 ## Interface
+<!--
 - Is there a change to the package's interface?
-
+-->
 
 ## Developer
+<!--
 - What are the other changes that are not directly visible to the user ?
-
+-->
 
 # Details
+<!--
 - Why did you make this change? What does it affect?
-
+-->
 
 # Acceptance Criteria
-## Release Plan & Dependencies
-- What depends on this?
-- What does this depend on?
+## Documentation
+<!--
+If this PR adds new functionality, is it documented?  
+We should not approve new features without both usage & maintenance being documented, 
+as well as additional test coverage added.
+-->
+
+## Dependencies
+### What depends on this PR?
+<!--
+- Link to relevant pull request(s) here
+-->
+
+### What does this PR depend on?
+<!--
+- Link to relevant pull request(s) here
+-->
+
+## Release Plan
+<!--
 - What is the order of operations necessary to ensure proper deployment?
-  - Please link to any & all specific pull requests here
+- Please leave a detailed release plan including complete order of operations
+-->
 
 
 ## Testing
+<!--
 - How can the other reviewers check that your change works?
+- Are new tests 
+-->
 - Is SQA Review & Approval necessary to ensure this change works as expected?
   - [ ] yes
   - [ ] no
