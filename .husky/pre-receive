@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+main() {
+  # Read the oldref, newref, and refname from stdin
+  while read oldrev newrev refname; do
+    # Only apply this hook to the master branch
+    if [[ "${refname}" == "refs/heads/master" ]]; then
+      # Get the list of changed files in the push
+      changed_files=$(git diff-tree --name-only -r "${oldrev}" "${newrev}");
+
+      # Flag to track if any non-package.json file is changed
+      non_package_json_changed=false;
+
+      for file in "${changed_files[@]}"; do
+        if [[ "${file}" != "package.json" ]]; then
+          non_package_json_changed=true; break;
+        fi;
+      done;
+
+      if [[ "${non_package_json_changed}" == true ]]; then
+        echo "ERROR: Pushes to master are only allowed if only 'package.json' is modified.";
+        exit 1;
+      fi;
+    fi;
+  done;
+
+  exit 0
+}
+
+main "${@}"

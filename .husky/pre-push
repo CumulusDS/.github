@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+
+main() {
+  # Get the name of the remote and the branch being pushed
+  remote="${1}";
+  url="${2}";
+
+  while read local_ref local_sha remote_ref remote_sha; do
+    # Check if the target branch is 'master'
+    if [[ "$(basename "${remote_ref}")" = "master" ]]; then
+      # Get the list of changed files between the local and remote master branches
+      # (or between the local branch and an empty tree if remote_sha is all zeros)
+      if [[ "${remote_sha}" = "0000000000000000000000000000000000000000" ]]; then
+        # This is an initial push of the branch
+        changed_files=$(git diff --name-only "${local_sha}" --);
+      else
+        changed_files=$(git diff --name-only "${remote_sha}" "${local_sha}" --);
+      fi;
+
+      # Check if only 'package.json' was changed
+      if [[ "${changed_files}" == "package.json" ]]; then
+        echo "Push to master allowed: Only package.json was modified.";
+        exit 0;
+      else
+        echo "Error: Push to master rejected. Only 'package.json' is allowed to be changed for direct pushes to master.";
+        echo "Changed files: ${changed_files}";
+        exit 1;
+      fi;
+    fi;
+  done;
+
+  exit 0
+}
+
+main "${@}"
