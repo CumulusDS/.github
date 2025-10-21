@@ -94,7 +94,7 @@ main() {
   # set install arguments based on detected package manager
   [[ "${PM}" == "npm" ]] && args="install --save-dev";
   [[ "${PM}" == "pnpm" ]] && args="add --save-dev";
-  [[ "${PM}" == "yarn" ]] && args="install --dev";
+  [[ "${PM}" == "yarn" ]] && args="add --dev";
 
   # install packages
   eval "${PM} ${args} ${packages[*]}";
