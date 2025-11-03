@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Stale labeler
-        uses: actions/stale@v9
+        uses: actions/stale@v10
         with:
           exempt-all-milestones: true
           exempt-issue-labels: blocker,bug,keep alive
