@@ -1,0 +1,23 @@
+name: 🐛 Bug (Empty)
+description: File a bug report without a pre-built template
+title: "🐛 Bug: "
+type: "bug"
+labels: ["bug"]
+projects: ["CumulusDS/20"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Bug Report
+  - type: textarea
+    attributes:
+      label: Bug Report
+      description: Report your bug here.
+      placeholder: |
+        describe your bug
+        Don't forget to include details like:
+        1. expected behavior
+        2. Observed behaviour
+        3. steps to reproduce
+    validations:
+      required: true
