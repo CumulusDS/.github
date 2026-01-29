@@ -88,3 +88,22 @@ updates:
     target-branch: master # specifying target-branch in one configuration and not the other is a loophole that allows
     # us to have two configurations for "npm".  see open feature request:
     # https://github.com/dependabot/dependabot-core/issues/1778#issuecomment-1988140219
+  - package-ecosystem: "pip"
+    directory: "/python/pip"
+    schedule:
+      interval: "daily"
+      time: "07:00"
+      timezone: "America/New_York"
+    commit-message: # Prefix all commit messages with "pip: "
+      prefix: "pip"
+    labels:
+      - "dependencies"
+      - "dependabot"
+    assignees:
+      - "jeffsays"
+    reviewers:
+      - "jeffsays"
+    groups:
+      pip-deps:
+        patterns:
+          - "*"
