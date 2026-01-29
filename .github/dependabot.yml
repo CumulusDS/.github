@@ -104,6 +104,6 @@ updates:
     reviewers:
       - "jeffsays"
     groups:
-      pip-deps:
+      # Not sure
         patterns:
           - "*"
