@@ -104,6 +104,16 @@ updates:
     reviewers:
       - "jeffsays"
     groups:
-      # Not sure
-        patterns:
-          - "*"
+      prod-deps-sec-pip:
+        dependency-type: "production"
+      dev-deps-sec-pip:
+        dependency-type: "development"
+    allow: # Provide security updates, but not version updates, for open-source packages
+      - dependency-name: "*"
+        dependency-type: "all"
+    ignore: # Issue security updates, but not regular updates, for public packages
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+          - version-update:semver-patch
