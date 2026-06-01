@@ -344,3 +344,18 @@
   color: "ffffff"
   aliases: []
   delete: false
+- name: "Pollux"
+  description: "Team Pollux (Engagement)"
+  color: "FF69B4"
+  aliases: []
+  delete: false
+- name: "Castor"
+  description: "Team Castor (Growth)"
+  color: "3C302C"
+  aliases: []
+  delete: false
+- name: "Atlas"
+  description: "Team Atlas (Platform)"
+  color: "09850B"
+  aliases: []
+  delete: false
