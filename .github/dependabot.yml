@@ -88,3 +88,32 @@ updates:
     target-branch: master # specifying target-branch in one configuration and not the other is a loophole that allows
     # us to have two configurations for "npm".  see open feature request:
     # https://github.com/dependabot/dependabot-core/issues/1778#issuecomment-1988140219
+  - package-ecosystem: "pip"
+    directory: "/python/pip"
+    schedule:
+      interval: "daily"
+      time: "07:00"
+      timezone: "America/New_York"
+    commit-message: # Prefix all commit messages with "pip: "
+      prefix: "pip"
+    labels:
+      - "dependencies"
+      - "dependabot"
+    assignees:
+      - "jeffsays"
+    reviewers:
+      - "jeffsays"
+    groups:
+      prod-deps-sec-pip:
+        dependency-type: "production"
+      dev-deps-sec-pip:
+        dependency-type: "development"
+    allow: # Provide security updates, but not version updates, for open-source packages
+      - dependency-name: "*"
+        dependency-type: "all"
+    ignore: # Issue security updates, but not regular updates, for public packages
+      - dependency-name: "*"
+        update-types:
+          - version-update:semver-major
+          - version-update:semver-minor
+          - version-update:semver-patch
